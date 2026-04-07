@@ -1,12 +1,13 @@
 ---
 layout: post              # 使用 post 布局
-title: "tmux使用"
-date: 2026-04-07 20:23:00
-categories: [Unknown]  # 分类（会在博客页面按分类分组）
-tags: [Tools]      # 标签
+title: "Tmux note"
+date: 2026-04-07 20:23:00 +08:00
+categories: [Tech]  # 分类（会在博客页面按分类分组）
+tags: [Tools, Note]      # 标签
 code: true               # 启用代码高亮
 math: false              # 是否启用数学公式
 mermaid: false           # 是否启用 Mermaid 图表
+excerpt: 学习使用Tmux
 ---
 
 

@@ -15,6 +15,7 @@ gem "kramdown-parser-gfm"
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
+  gem "jekyll-books"
 end
 
 gemspec
