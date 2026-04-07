@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2026-04-07T23:05:07+08:00</updated><id>/feed.xml</id><title type="html">Linllia’s blog</title><subtitle>Ring ding ding ding ding!</subtitle><entry><title type="html">Tmux note</title><link href="/tech/2026/04/07/Tmux-using.html" rel="alternate" type="text/html" title="Tmux note" /><published>2026-04-07T20:23:00+08:00</published><updated>2026-04-07T20:23:00+08:00</updated><id>/tech/2026/04/07/Tmux-using</id><content type="html" xml:base="/tech/2026/04/07/Tmux-using.html"><![CDATA[<h2 id="tmux三层结构">tmux三层结构</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>session（会话）
+ ├─ window（窗口）
+ │   ├─ pane（面板/分屏）
+ │   └─ pane
+ └─ window
+</code></pre></div></div>
+
+<h2 id="session">session</h2>
+<p>session是一个工作空间
+创建</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux new -s dev
+</code></pre></div></div>
+<p>查看目前有的session</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux ls
+</code></pre></div></div>
+<p>使用某个session</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux attach -t dev
+</code></pre></div></div>
+<p>离开tmux但是仍继续运行（这个叫做detach</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b d
+</code></pre></div></div>
+
+<h2 id="window">window</h2>
+<p>window是窗口
+就是tmux下方数字代表的
+创建新窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b c
+</code></pre></div></div>
+<p>切换下一个窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b n
+</code></pre></div></div>
+<p>切换上一个窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b p
+</code></pre></div></div>
+<p>直接切换到对应数字的窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b 0/1/2
+</code></pre></div></div>
+<p>关闭窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b &amp;
+</code></pre></div></div>
+<p>如果只有一个pane的话直接exit</p>
+
+<h2 id="pane">pane</h2>
+<p>pane是每个窗口里的小格
+左右分屏</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b %
+</code></pre></div></div>
+<p>上下分屏</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b “
+</code></pre></div></div>
+<p>切换pane</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b ⬆️⬇️⬅️➡️
+</code></pre></div></div>
+<p>关闭pane</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exit
+</code></pre></div></div>]]></content><author><name></name></author><category term="Tech" /><category term="Tools" /><category term="Note" /><summary type="html"><![CDATA[学习使用Tmux]]></summary></entry><entry><title type="html">My first blog</title><link href="/unknown/2026/04/06/My-first-blog.html" rel="alternate" type="text/html" title="My first blog" /><published>2026-04-06T23:00:00+08:00</published><updated>2026-04-06T23:00:00+08:00</updated><id>/unknown/2026/04/06/My-first-blog</id><content type="html" xml:base="/unknown/2026/04/06/My-first-blog.html"><![CDATA[<h2 id="我开通了博客">我开通了博客！</h2>
+
+<p>It’s Linllia here, 很高兴认识你们。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello world! 
+</code></pre></div></div>
+
+<p><img src="/img/My-fist-blog/HCEZ6TtacAAZ2ey.jpeg" alt="图片测试" /></p>
+
+<blockquote>
+  <p><em>一切开始的地方</em></p>
+</blockquote>]]></content><author><name></name></author><category term="Unknown" /><category term="Unknown" /><summary type="html"><![CDATA[我开通了博客！]]></summary></entry></feed>

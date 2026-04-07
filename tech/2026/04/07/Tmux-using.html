@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content=""><title>Tmux note | Linllia's blog</title>
+  <meta name="keywords" content="">
+  <meta name="description" content=""><link rel="stylesheet" href="/assets/main.css?v=0.3.3" />
+<script src="/assets/main.js?v=0.3.3" defer></script><link rel="stylesheet" href="/assets/css/tomorrow.css" />
+<script src="/assets/js/highlight.js"></script><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script><script src="https://unpkg.com/mermaid@7.1.0/dist/mermaid.min.js" defer></script></head>
+<body class="body-post">
+    <a href="/" class="logo"><h1>Linllia's blog</h1>
+</a><main class="post__wrapper"><nav class="top-nav">
+
+<a href="/about/" class="nav-link ">About</a>
+
+
+<a href="/blog/" class="nav-link ">Blog</a>
+
+
+<a href="/journal/" class="nav-link ">journal</a>
+
+
+<a href="https://your-external-link.com" class="nav-link ">External Link Title</a>
+
+
+</nav><div class="post__top_navs clearfix">
+    <nav class="post__archive_path"><a href="/blog/" id="archiveBtn">
+        <div class="post__archive_icon">
+          <svg width="40" height="40">
+            <circle class="circle-progress" r="18" cy="20" cx="20"  stroke-linejoin="round" stroke-linecap="round" />
+          </svg>
+          <span class="post__archive_icon"></span>
+        </div>
+        Linllia's blog
+      </a>
+    </nav>
+  </div>
+  <article class="post">
+    <header class="post__header">
+      <h1 class="post__title">Tmux note</h1>
+      <div class="post__meta">
+        <time>2026-04-07 20:23</time>
+      </div>
+    </header>
+    <div class="post__content content">
+      <h2 id="tmux三层结构">tmux三层结构</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>session（会话）
+ ├─ window（窗口）
+ │   ├─ pane（面板/分屏）
+ │   └─ pane
+ └─ window
+</code></pre></div></div>
+
+<h2 id="session">session</h2>
+<p>session是一个工作空间
+创建</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux new -s dev
+</code></pre></div></div>
+<p>查看目前有的session</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux ls
+</code></pre></div></div>
+<p>使用某个session</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tmux attach -t dev
+</code></pre></div></div>
+<p>离开tmux但是仍继续运行（这个叫做detach</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b d
+</code></pre></div></div>
+
+<h2 id="window">window</h2>
+<p>window是窗口
+就是tmux下方数字代表的
+创建新窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b c
+</code></pre></div></div>
+<p>切换下一个窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b n
+</code></pre></div></div>
+<p>切换上一个窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b p
+</code></pre></div></div>
+<p>直接切换到对应数字的窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b 0/1/2
+</code></pre></div></div>
+<p>关闭窗口</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b &amp;
+</code></pre></div></div>
+<p>如果只有一个pane的话直接exit</p>
+
+<h2 id="pane">pane</h2>
+<p>pane是每个窗口里的小格
+左右分屏</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b %
+</code></pre></div></div>
+<p>上下分屏</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b “
+</code></pre></div></div>
+<p>切换pane</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ctrl+b ⬆️⬇️⬅️➡️
+</code></pre></div></div>
+<p>关闭pane</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exit
+</code></pre></div></div>
+
+
+    </div>
+  </article><aside class="post__contact"><h4><a href="/about/">Linllia's blog</a></h4>
+  <p>Ring ding ding ding ding!</p>
+<div class="icon__list"><a href="mailto:lih31942@gmail.com" class="icon__link" target="_blank"><svg class="icon__stroke" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+  <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+</a></div>
+</aside>
+</main><script>hljs.initHighlightingOnLoad();</script><footer class="site-footer">
+  © 2026<a href="/">Linllia's blog</a>. Theme<a href="https://github.com/erlzhang/jekyll-theme-persephone" target="_blank">Persephone</a>
+</footer>
+
+  </body>
+</html>
